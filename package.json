@@ -1,0 +1,44 @@
+{
+  "name": "oneyi",
+  "version": "0.0.1",
+  "description": "一个翻译接口, 对接多个平台, one译",
+  "main": "index.js",
+  "prettier": {
+    "trailingComma": "none"
+  },
+  "scripts": {
+    "push": "node push.js",
+    "start:dev": "nodemon --verbose index.js",
+    "start:prod": "node index.js",
+    "start": "npm run start:dev"
+  },
+  "nodemonConfig": {
+    "watch": [
+      "config/",
+      "translationPlatform/",
+      "index.js"
+    ],
+    "ext": "js,ini"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@alicloud/alimt20181012": "1.2.0",
+    "@alicloud/openapi-client": "^0.4.8",
+    "@alicloud/tea-console": "^1.0.0",
+    "@alicloud/tea-typescript": "^1.7.1",
+    "@alicloud/tea-util": "^1.4.7",
+    "@baiducloud/qianfan": "^0.0.6",
+    "@google/generative-ai": "^0.3.0",
+    "@koa/bodyparser": "^5.0.0",
+    "@volcengine/openapi": "^1.16.0",
+    "axios": "^1.6.7",
+    "ini": "^4.1.2",
+    "jsonwebtoken": "^9.0.2",
+    "koa": "^2.15.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
